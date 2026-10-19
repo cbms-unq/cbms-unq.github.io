@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "tipo": "Publicación",
+    "titulo_es": "Avance en la caracterización biofísica de transportadores bacterianos",
+    "titulo_en": "Breakthrough in biophysical characterization of bacterial transporters",
+    "fecha": "2026-10-15",
+    "fecha_expiracion": null,
+    "resumen_es": "Investigadores del CBMS en colaboración con el LBBS y el LFGBBP publicaron hallazgos sobre la dinámica estructural de proteínas de membrana involucradas en la simbiosis vegetal.",
+    "resumen_en": "CBMS researchers in collaboration with LBBS and LFGBBP published novel findings on the structural dynamics of membrane proteins involved in plant symbiosis.",
+    "enlace_url": "https://www.unq.edu.ar/"
+  },
+  {
+    "id": 2,
+    "tipo": "Llamado / Beca",
+    "titulo_es": "Convocatoria a Becas Doctorales y Posdoctorales CONICET-UNQ 2026",
+    "titulo_en": "Call for CONICET-UNQ Doctoral and Postdoctoral Fellowships 2026",
+    "fecha": "2026-10-01",
+    "fecha_expiracion": "2026-12-15",
+    "resumen_es": "Se reciben postulaciones de graduados en Biotecnología, Bioquímica, Biología y carreras afines para incorporarse a las líneas de investigación del centro.",
+    "resumen_en": "Applications are open for graduates in Biotechnology, Biochemistry, Biology, and related fields to join CBMS research programs.",
+    "enlace_url": "https://www.unq.edu.ar/"
+  }
+]

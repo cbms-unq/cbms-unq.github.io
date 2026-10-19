@@ -1,0 +1,68 @@
+/**
+ * CBMS - Centro de Biología Molecular y Simbiosis (UNQ)
+ * Design Tokens & Visual Properties (Bio-Organic Dark Mode)
+ * Based on ANALISIS_DISENO_VISUAL_LFGBBP.md
+ */
+
+:root {
+  /* Brand Chromatic Palette */
+  --color-canvas: #252d23;          /* Dark Forest - Main page background */
+  --color-surface-dark: #1b201a;    /* Dark Earth Olive - Header & footer */
+  --color-surface-card: rgba(27, 32, 26, 0.82); /* Glassmorphic card surface */
+  --color-surface-glass: rgba(255, 255, 255, 0.04);
+  --color-surface-muted: #474747;   /* Neutral slate */
+
+  /* Botanical Greens */
+  --color-primary: #659A5A;         /* Sage Leaf - Primary botanical identity */
+  --color-primary-deep: #4a7c41;    /* Deep Forest Green */
+  --color-accent-mint: #a3d996;     /* Mint Sprout - Interactive accent & hover */
+  --color-accent-glow: #29ce1c;     /* Organic glow */
+
+  /* Text Hierarchy & Contrast (WCAG AA Compliant) */
+  --color-text-white: #ffffff;      /* Titles, active nav, primary buttons */
+  --color-text-primary: #f0f0f0;    /* Headings, prominent copy */
+  --color-text-secondary: #dcdcdc;  /* Body copy, descriptions */
+  --color-text-muted: #a0a0a0;      /* Metadata, dates, secondary labels */
+  --color-text-dim: #707070;        /* Inactive states, minor captions */
+  --color-text-dark: #1a1a1a;       /* Text for high-contrast light elements */
+
+  /* Semantic Overlays */
+  --overlay-light-subtle: rgba(255, 255, 255, 0.05);
+  --overlay-light-medium: rgba(255, 255, 255, 0.12);
+  --overlay-shadow-card: rgba(0, 0, 0, 0.25);
+  --overlay-shadow-deep: rgba(0, 0, 0, 0.45);
+  --border-subtle: rgba(101, 154, 90, 0.25);
+  --border-accent: rgba(163, 217, 150, 0.50);
+
+  /* Morphology & Radii */
+  --radius-pill: 50px;              /* Full pill for interactive buttons */
+  --radius-capsule: 20px;           /* Language switch and tags */
+  --radius-card: 16px;              /* Cards & feature containers */
+  --radius-sm: 8px;                 /* News items, badges */
+  --radius-circle: 50%;             /* Perfect circle emblems */
+
+  /* Elevations & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 20px rgba(101, 154, 90, 0.35);
+  --shadow-glow-mint: 0 0 22px rgba(163, 217, 150, 0.40);
+
+  /* System Font Stack (0ms external font latency) */
+  --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+  --font-size-base: 1rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Transitions & Timing */
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout Containers */
+  --container-max-width: 1240px;
+  --header-height: 80px;
+}

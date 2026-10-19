@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "tipo": "Seminario",
+    "titulo_es": "Seminario CBMS: Nuevas perspectivas en interacción planta-microorganismo",
+    "titulo_en": "CBMS Seminar: Novel perspectives on plant-microbe interactions",
+    "fecha": "2026-11-05",
+    "horario_lugar": "14:00 hs - Auditorio UNQ / Híbrido",
+    "resumen_es": "Disertación a cargo de investigadores invitados sobre mecanismos moleculares y biofísicos de nodulación en leguminosas.",
+    "resumen_en": "Guest lecture discussing molecular and biophysical mechanisms of nodulation in legumes.",
+    "enlace_url": "https://www.unq.edu.ar/"
+  },
+  {
+    "id": 2,
+    "tipo": "Jornada",
+    "titulo_es": "Jornada Abierta de Jóvenes Investigadores en Biología Molecular",
+    "titulo_en": "Open Workshop for Early-Career Researchers in Molecular Biology",
+    "fecha": "2026-11-20",
+    "horario_lugar": "10:00 a 17:00 hs - Laboratorios CBMS",
+    "resumen_es": "Presentación de pósteres y avances de tesis de maestría y doctorado de los laboratorios LBBS y LFGBBP.",
+    "resumen_en": "Poster presentations and thesis progress symposium from LBBS and LFGBBP doctoral students.",
+    "enlace_url": null
+  }
+]

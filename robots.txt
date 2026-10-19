@@ -1,0 +1,8 @@
+# robots.txt for CBMS - Centro de Biología Molecular y Simbiosis (UNQ)
+# https://cbms-unq.github.io/
+
+User-agent: *
+Allow: /
+
+# Sitemap Index Pointer
+Sitemap: https://cbms-unq.github.io/sitemap.xml

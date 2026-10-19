@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Microscope Base & Arm -->
+  <path d="M20 90h45M42 90V78M32 78h20" stroke="#659A5A" stroke-width="3"/>
+  <path d="M42 78c-12 0-18-8-18-20 0-14 8-22 18-22" stroke="#659A5A" stroke-width="3"/>
+  <rect x="36" y="16" width="12" height="28" rx="3" transform="rotate(-25 42 30)" fill="#252d23" stroke="#a3d996" stroke-width="2.5"/>
+  <path d="M48 10l9 4M28 47l9 4M34 50l3 5" stroke="#a3d996" stroke-width="2.5"/>
+  <rect x="26" y="58" width="30" height="4" rx="2" fill="#659A5A"/>
+  <!-- DNA Double Helix on Right -->
+  <path d="M72 15c-6 10-6 18 0 28s6 18 0 28-6 14 0 20" stroke="#a3d996" stroke-width="2.5"/>
+  <path d="M84 15c6 10 6 18 0 28s-6 18 0 28 6 14 0 20" stroke="#659A5A" stroke-width="2.5"/>
+  <!-- Base Pairs / Rungs -->
+  <line x1="71" y1="22" x2="85" y2="22" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8"/>
+  <line x1="75" y1="29" x2="81" y2="29" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8"/>
+  <line x1="71" y1="36" x2="85" y2="36" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8"/>
+  <line x1="71" y1="50" x2="85" y2="50" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8"/>
+  <line x1="75" y1="57" x2="81" y2="57" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8"/>
+  <line x1="71" y1="64" x2="85" y2="64" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8"/>
+  <line x1="71" y1="78" x2="85" y2="78" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8"/>
+  <circle cx="78" cy="22" r="2" fill="#a3d996"/>
+  <circle cx="78" cy="50" r="2" fill="#659A5A"/>
+  <circle cx="78" cy="78" r="2" fill="#a3d996"/>
+</svg>

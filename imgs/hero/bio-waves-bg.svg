@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 600" width="100%" height="100%" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#659A5A" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#a3d996" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#252d23" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Flowing bio-topographic contours -->
+  <path d="M0,280 C320,160 520,380 840,240 C1160,100 1320,320 1440,220 L1440,600 L0,600 Z" fill="url(#waveGrad)"/>
+  <path d="M0,320 C280,220 600,420 900,280 C1200,140 1350,340 1440,270" fill="none" stroke="#659A5A" stroke-width="1.5" stroke-opacity="0.25"/>
+  <path d="M0,380 C340,260 580,460 960,330 C1240,210 1380,390 1440,320" fill="none" stroke="#a3d996" stroke-width="1" stroke-opacity="0.20"/>
+  <path d="M0,440 C300,320 640,510 1020,380 C1280,260 1400,430 1440,380" fill="none" stroke="#659A5A" stroke-width="1" stroke-opacity="0.15" stroke-dasharray="6 4"/>
+  <path d="M0,500 C360,400 700,560 1080,440 C1320,320 1410,480 1440,430" fill="none" stroke="#a3d996" stroke-width="1.5" stroke-opacity="0.12"/>
+</svg>
