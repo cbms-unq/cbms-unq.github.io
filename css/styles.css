@@ -163,8 +163,8 @@ a:hover {
 }
 
 .brand-emblem {
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.9rem;
+  height: 2.9rem;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -186,8 +186,11 @@ a:hover {
   font-size: 1.25rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-text-white);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.22em; /* Wide tracking as in the official "C B M S" wordmark */
   line-height: 1.1;
+  padding-bottom: 0.15rem;
+  margin-bottom: 0.15rem;
+  border-bottom: 2px solid var(--color-text-white); /* Rule under the wordmark, as in the logo */
 }
 
 .brand-subtitle {
@@ -195,8 +198,8 @@ a:hover {
   font-weight: var(--font-weight-regular);
   color: #a0a0a0;
   letter-spacing: 0.1px;
-  line-height: 1.25;
-  max-width: 8.2rem; /* Two-line subtitle as in the mockup */
+  line-height: 1.15;
+  white-space: nowrap; /* Explicit three-line break mirroring the official logo */
 }
 
 /* Header Right Area */

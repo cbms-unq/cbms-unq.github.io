@@ -1,6 +1,6 @@
 # Guía Operativa: Headless CMS en Google Sheets para CBMS
 
-Esta guía documenta la configuración y uso del sistema de gestión de contenidos (**Headless CMS Modelo B**) para el portal del **Centro de Biología Molecular y Simbiosis (CBMS - UNQ)**.
+Esta guía documenta la configuración y uso del sistema de gestión de contenidos (**Headless CMS Modelo B**) para el portal del **Centro de Bioquímica y Microbiología del Suelo (CBMS - UNQ)**.
 
 ---
 

@@ -1,4 +1,4 @@
-# robots.txt for CBMS - Centro de Biología Molecular y Simbiosis (UNQ)
+# robots.txt for CBMS - Centro de Bioquímica y Microbiología del Suelo (UNQ)
 # https://cbms-unq.github.io/
 
 User-agent: *

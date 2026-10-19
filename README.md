@@ -1,6 +1,6 @@
-# Centro de Biología Molecular y Simbiosis (CBMS - UNQ)
+# Centro de Bioquímica y Microbiología del Suelo (CBMS - UNQ)
 
-Sitio web oficial del **Centro de Biología Molecular y Simbiosis (CBMS)**, unidad de investigación de la [Universidad Nacional de Quilmes (UNQ)](https://www.unq.edu.ar/) que nuclea y articula al **Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS)** y al **Laboratorio de Fisiología y Genética de Bacterias Beneficiosas para Plantas (LFGBBP)**.
+Sitio web oficial del **Centro de Bioquímica y Microbiología del Suelo (CBMS)**, unidad de investigación de la [Universidad Nacional de Quilmes (UNQ)](https://www.unq.edu.ar/) que nuclea y articula al **Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS)** y al **Laboratorio de Fisiología y Genética de Bacterias Beneficiosas para Plantas (LFGBBP)**.
 
 ## Arquitectura Técnica
 
@@ -58,4 +58,4 @@ Abra el navegador en `http://localhost:8000`.
 
 ## Licencia y Titularidad
 
-© 2026 Centro de Biología Molecular y Simbiosis (CBMS) - Universidad Nacional de Quilmes (UNQ). Todos los derechos reservados.
+© 2026 Centro de Bioquímica y Microbiología del Suelo (CBMS) - Universidad Nacional de Quilmes (UNQ). Todos los derechos reservados.

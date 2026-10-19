@@ -1,5 +1,5 @@
 /**
- * CBMS - Centro de Biología Molecular y Simbiosis (UNQ)
+ * CBMS - Centro de Bioquímica y Microbiología del Suelo (UNQ)
  * Design Tokens & Visual Properties (Bio-Organic Dark Mode)
  * Based on ANALISIS_DISENO_VISUAL_LFGBBP.md
  */
@@ -64,5 +64,5 @@
 
   /* Layout Containers */
   --container-max-width: 1080px;
-  --header-height: 4.4rem;
+  --header-height: 4.9rem;
 }
