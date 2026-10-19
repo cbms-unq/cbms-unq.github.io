@@ -117,7 +117,7 @@
 
   <!-- Header & Primary Navigation -->
   <header class="site-header" role="banner">
-    <div class="container">
+    <div class="container header-container">
       <a href="#inicio" class="header-brand" aria-label="CBMS - Inicio">
         <div class="brand-emblem">
           <img src="./imgs/logo/cbms-tree-logo.svg" alt="Isotipo del CBMS" width="48" height="48">
@@ -128,31 +128,34 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="site-nav" role="navigation" aria-label="Navegación principal">
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="#inicio" class="nav-link active" data-i18n="nav_inicio">Inicio</a></li>
-          <li><a href="#sobre-el-centro" class="nav-link" data-i18n="nav_sobre">Sobre el Centro</a></li>
-          <li><a href="#laboratorios" class="nav-link" data-i18n="nav_labs">Laboratorios</a></li>
-          <li><a href="#novedades" class="nav-link" data-i18n="nav_novedades">Novedades</a></li>
-          <li><a href="#contacto" class="nav-link" data-i18n="nav_contacto">Contacto</a></li>
-        </ul>
-      </nav>
+      <!-- Header Right Controls -->
+      <div class="header-right">
+        <!-- Desktop Navigation Menu -->
+        <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#inicio" class="nav-link active" data-i18n="nav_inicio">Inicio</a></li>
+            <li><a href="#sobre-el-centro" class="nav-link" data-i18n="nav_sobre">Sobre el Centro</a></li>
+            <li><a href="#laboratorios" class="nav-link" data-i18n="nav_labs">Laboratorios</a></li>
+            <li><a href="#novedades" class="nav-link" data-i18n="nav_novedades">Novedades</a></li>
+            <li><a href="#contacto" class="nav-link" data-i18n="nav_contacto">Contacto</a></li>
+          </ul>
+        </nav>
 
-      <!-- Language Selector Capsule -->
-      <div class="lang-switch" role="group" aria-label="Selector de idioma">
-        <button type="button" class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
-        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <!-- Language Selector Capsule -->
+        <div class="lang-switch" role="group" aria-label="Selector de idioma">
+          <button type="button" class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú de navegación">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
-
-      <!-- Mobile Hamburger Button -->
-      <button type="button" class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú de navegación">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
     </div>
   </header>
 
@@ -163,16 +166,14 @@
     <section id="inicio" class="hero-section" aria-label="Bienvenida al CBMS">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="hero-badge">
-            <span data-i18n="hero_badge">Universidad Nacional de Quilmes</span>
-          </div>
-          <h1 class="hero-title" data-i18n="hero_title">Bienvenidos al CBMS</h1>
+          <div class="hero-accent-circle" aria-hidden="true"></div>
+          <h1 class="hero-title" data-i18n="hero_title">Bienvenidos<br>al CBMS</h1>
           <p class="hero-subtitle" data-i18n="hero_subtitle">Avanzando en la investigación de la Biología Molecular y la Simbiosis</p>
           <a href="#sobre-el-centro" class="btn btn-primary" data-i18n="hero_cta">Conocer más</a>
         </div>
         <div class="hero-visual">
-          <div class="hero-image-wrapper">
-            <img src="./imgs/hero/scientist-placeholder.png" alt="Investigadora científica en el laboratorio del CBMS" class="hero-image" width="440" height="440" data-i18n-alt="hero_alt_scientist">
+          <div class="hero-portrait-frame">
+            <img src="./imgs/hero/scientist-placeholder.png" alt="Investigadora científica en el laboratorio del CBMS" class="hero-image" width="340" height="440" data-i18n-alt="hero_alt_scientist">
           </div>
         </div>
       </div>
@@ -181,9 +182,7 @@
     <!-- Sobre el Centro Section -->
     <section id="sobre-el-centro" class="about-section" aria-labelledby="about-title">
       <div class="container">
-        <div class="section-title">
-          <h2 id="about-title" data-i18n="about_title">Sobre el Centro</h2>
-        </div>
+        <h2 id="about-title" class="section-heading-left" data-i18n="about_title">Sobre el Centro</h2>
         <div class="about-grid">
           <div class="about-text">
             <p data-i18n="about_desc_1">
@@ -217,11 +216,8 @@
     <!-- Nuestros Laboratorios Section -->
     <section id="laboratorios" class="labs-section" aria-labelledby="labs-title">
       <div class="container">
-        <div class="section-title">
-          <div>
-            <h2 id="labs-title" data-i18n="labs_title">Nuestros Laboratorios</h2>
-            <p style="color: var(--color-accent-mint); font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0;" data-i18n="labs_subtitle">Unidades científicas integradas en el Centro de Biología Molecular y Simbiosis</p>
-          </div>
+        <div class="section-header-center">
+          <h2 id="labs-title" class="section-title-green" data-i18n="labs_title">Nuestros Laboratorios</h2>
         </div>
 
         <div class="labs-grid">
@@ -265,8 +261,8 @@
     <!-- Novedades y Actividades Section -->
     <section id="novedades" class="news-events-section" aria-labelledby="news-events-title">
       <div class="container">
-        <div class="section-title">
-          <h2 id="news-events-title" data-i18n="news_events_title">Novedades y Actividades</h2>
+        <div class="section-header-center">
+          <h2 id="news-events-title" class="section-title-green" data-i18n="news_events_title">Novedades y Actividades</h2>
         </div>
 
         <div class="news-events-grid">
