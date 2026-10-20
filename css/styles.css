@@ -736,7 +736,7 @@ a:hover {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-columns: 0.9fr 1.7fr 1.1fr;
   gap: 2rem;
   margin-bottom: 1.25rem;
 }
@@ -787,9 +787,9 @@ a:hover {
   border-radius: var(--radius-sm);
   overflow: hidden;
   border: 1px solid var(--border-subtle);
-  aspect-ratio: 16/9;
-  max-height: 6.5rem;
-  max-width: 15rem;
+  height: 13rem;
+  max-height: none;
+  max-width: none;
   background-color: var(--color-canvas);
 }
 
@@ -802,13 +802,25 @@ a:hover {
 .footer-brand-wrap {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 0.5rem;
 }
 
+.footer-brand-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.footer-brand-row p {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
 .footer-brand-wrap .brand-emblem {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.8rem;
+  height: 2.8rem;
 }
 
 .footer-bottom {
@@ -929,4 +941,23 @@ a:hover {
   .lang-switch {
     margin-right: 0.25rem;
   }
+}
+
+/* Developer credit (footer) */
+.footer-credit {
+  font-size: 0.72rem;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+.footer-credit a {
+  color: var(--color-accent-mint);
+  font-weight: var(--font-weight-semibold);
+}
+.footer-credit a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-bottom {
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
 }

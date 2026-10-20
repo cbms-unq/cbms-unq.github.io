@@ -65,6 +65,17 @@
     }, observerOptions);
 
     sections.forEach((section) => observer.observe(section));
+
+    // The footer is short, so it may never cross the observer band:
+    // force the last link ("Contacto") active when the page bottom is reached.
+    function syncBottom() {
+      const atBottom = window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4;
+      if (!atBottom) return;
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link === navLinks[navLinks.length - 1]);
+      });
+    }
+    window.addEventListener('scroll', syncBottom, { passive: true });
   }
 
   function initMobileMenu() {

@@ -47,6 +47,7 @@
     "footer_institution_title": "Institución",
     "footer_address_text": "Universidad Nacional de Quilmes<br>Roque Sáenz Peña 352, Bernal (B1876BXD)<br>Provincia de Buenos Aires, Argentina",
     "footer_institution_desc": "Unidad de investigación de la Universidad Nacional de Quilmes orientada al avance del conocimiento en ciencias biomoleculares y biotecnología.",
+    "footer_credit_prefix": "Desarrollado por",
     "footer_copyright": "© 2026 Centro de Bioquímica y Microbiología del Suelo (CBMS - UNQ). Todos los derechos reservados.",
     "footer_alt_logo": "Isotipo oficial del Centro de Bioquímica y Microbiología del Suelo"
   },
@@ -98,6 +99,7 @@
     "footer_institution_title": "Institution",
     "footer_address_text": "National University of Quilmes<br>Roque Sáenz Peña 352, Bernal (B1876BXD)<br>Buenos Aires, Argentina",
     "footer_institution_desc": "Research unit of the National University of Quilmes committed to the advancement of biomolecular science and biotechnology.",
+    "footer_credit_prefix": "Developed by",
     "footer_copyright": "© 2026 Center for Soil Biochemistry and Microbiology (CBMS - UNQ). All rights reserved.",
     "footer_alt_logo": "Official emblem of the Center for Soil Biochemistry and Microbiology"
   }
