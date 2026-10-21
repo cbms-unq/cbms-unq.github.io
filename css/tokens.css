@@ -63,6 +63,6 @@
   --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Layout Containers */
-  --container-max-width: 1080px;
-  --header-height: 4.9rem;
+  --container-max-width: 1140px;
+  --header-height: 5rem;
 }
