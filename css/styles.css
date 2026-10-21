@@ -838,8 +838,15 @@ a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.25rem;
 	font-size: 0.72rem;
 	color: var(--color-text-muted);
+}
+
+.footer-bottom p {
+	margin: 0;
+	line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -967,8 +974,4 @@ a:hover {
 .footer-credit a:hover {
 	text-decoration: underline;
 	text-underline-offset: 3px;
-}
-.footer-bottom {
-	flex-wrap: wrap;
-	gap: 0.4rem 1.25rem;
 }
