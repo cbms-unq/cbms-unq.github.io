@@ -2,23 +2,23 @@
   {
     "id": 1,
     "tipo": "Seminario",
-    "titulo_es": "Seminario CBMS: Nuevas perspectivas en interacción planta-microorganismo",
-    "titulo_en": "CBMS Seminar: Novel perspectives on plant-microbe interactions",
+    "titulo_es": "Seminario: Lorem ipsum dolor sit amet consectetur",
+    "titulo_en": "Seminar: Lorem ipsum dolor sit amet consectetur",
     "fecha": "2026-11-05",
-    "horario_lugar": "14:00 hs - Auditorio UNQ / Híbrido",
-    "resumen_es": "Disertación a cargo de investigadores invitados sobre mecanismos moleculares y biofísicos de nodulación en leguminosas.",
-    "resumen_en": "Guest lecture discussing molecular and biophysical mechanisms of nodulation in legumes.",
+    "horario_lugar": "14:00 hs — Auditorio UNQ",
+    "resumen_es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+    "resumen_en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
     "enlace_url": "https://www.unq.edu.ar/"
   },
   {
     "id": 2,
     "tipo": "Jornada",
-    "titulo_es": "Jornada Abierta de Jóvenes Investigadores en Biología Molecular",
-    "titulo_en": "Open Workshop for Early-Career Researchers in Molecular Biology",
+    "titulo_es": "Jornada: Ut enim ad minim veniam quis nostrud",
+    "titulo_en": "Workshop: Ut enim ad minim veniam quis nostrud",
     "fecha": "2026-11-20",
-    "horario_lugar": "10:00 a 17:00 hs - Laboratorios CBMS",
-    "resumen_es": "Presentación de pósteres y avances de tesis de maestría y doctorado de los laboratorios LBBS y LFGBBP.",
-    "resumen_en": "Poster presentations and thesis progress symposium from LBBS and LFGBBP doctoral students.",
+    "horario_lugar": "10:00 a 17:00 hs — Laboratorios CBMS",
+    "resumen_es": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "resumen_en": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     "enlace_url": null
   }
 ]

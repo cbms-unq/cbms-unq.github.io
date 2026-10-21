@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="labLfgbbpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181e17"/>
+      <stop offset="50%" stop-color="#222b20"/>
+      <stop offset="100%" stop-color="#161c15"/>
+    </linearGradient>
+    <pattern id="gridPattern2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="mintGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a3d996"/>
+      <stop offset="100%" stop-color="#659A5A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="12" fill="url(#labLfgbbpBg)"/>
+  <rect width="800" height="500" rx="12" fill="url(#gridPattern2)"/>
+  <rect x="15" y="15" width="770" height="470" rx="10" fill="none" stroke="#659A5A" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="8,8"/>
+
+  <!-- Icon: Plant Bacteria / Genetics Vector -->
+  <g transform="translate(400, 185)">
+    <!-- Outer Glow Circle -->
+    <circle cx="0" cy="0" r="64" fill="#659A5A" fill-opacity="0.12" stroke="#659A5A" stroke-opacity="0.35" stroke-width="2"/>
+    <!-- Leaf & Petri dish icon -->
+    <path d="M 0,-30 C 22,-30 30,-8 30,12 C 10,12 -10,32 -30,12 C -30,-8 -22,-30 0,-30 Z" fill="#181e17" stroke="url(#mintGrad2)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M 0,-25 L 0,12" stroke="url(#mintGrad2)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-10" cy="-6" r="3" fill="#a3d996"/>
+    <circle cx="12" cy="0" r="3.5" fill="#a3d996"/>
+    <circle cx="2" cy="22" r="2.5" fill="#a3d996"/>
+  </g>
+
+  <!-- Center Text Information -->
+  <g text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    <rect x="290" y="280" width="220" height="30" rx="15" fill="#659A5A" fill-opacity="0.2" stroke="#659A5A" stroke-opacity="0.5"/>
+    <text x="400" y="300" font-size="12" font-weight="700" fill="#a3d996" letter-spacing="2">FOTO PLACEHOLDER</text>
+    <text x="400" y="345" font-size="22" font-weight="700" fill="#ffffff" letter-spacing="0.5">Laboratorio LFGBBP</text>
+    <text x="400" y="375" font-size="15" fill="#a0a0a0">Aspect Ratio 16:10 · 800 × 500 px</text>
+    <text x="400" y="420" font-size="13" fill="#74a367" font-style="italic">Pendiente de fotografía oficial del laboratorio</text>
+  </g>
+</svg>

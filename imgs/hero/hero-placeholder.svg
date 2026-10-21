@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d241c"/>
+      <stop offset="50%" stop-color="#242e22"/>
+      <stop offset="100%" stop-color="#1a2019"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a3d996"/>
+      <stop offset="100%" stop-color="#659A5A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Card -->
+  <rect x="2" y="2" width="336" height="436" rx="20" fill="url(#heroBg)" stroke="#659A5A" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="12" y="12" width="316" height="416" rx="14" fill="none" stroke="#659A5A" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="6,6"/>
+
+  <!-- Decorative Rings -->
+  <circle cx="170" cy="180" r="100" fill="none" stroke="#659A5A" stroke-opacity="0.08" stroke-width="2"/>
+  <circle cx="170" cy="180" r="75" fill="none" stroke="#659A5A" stroke-opacity="0.12" stroke-width="1.5"/>
+
+  <!-- Central Silhouette / Science Portrait Icon -->
+  <g transform="translate(170, 175)">
+    <!-- Head -->
+    <circle cx="0" cy="-35" r="26" fill="none" stroke="url(#accentGrad)" stroke-width="3"/>
+    <!-- Body / Shoulders -->
+    <path d="M -48,25 C -48,-10 -28,-18 0,-18 C 28,-18 48,-10 48,25" fill="none" stroke="url(#accentGrad)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Lab Flask badge -->
+    <circle cx="28" cy="10" r="18" fill="#1d241c" stroke="#a3d996" stroke-width="2"/>
+    <path d="M 24,18 L 32,18 L 30,10 L 30,6 L 26,6 L 26,10 Z" fill="none" stroke="#a3d996" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Labels -->
+  <g text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    <rect x="70" y="270" width="200" height="26" rx="13" fill="#659A5A" fill-opacity="0.2" stroke="#659A5A" stroke-opacity="0.4"/>
+    <text x="170" y="287" font-size="11" font-weight="700" fill="#a3d996" letter-spacing="1.5">IMAGEN PLACEHOLDER</text>
+    <text x="170" y="325" font-size="14" font-weight="600" fill="#ffffff">Retrato Investigador/a</text>
+    <text x="170" y="348" font-size="12" fill="#a0a0a0">340 × 440 px</text>
+    <text x="170" y="380" font-size="11" fill="#74a367" font-style="italic">Pendiente de fotografía oficial</text>
+  </g>
+</svg>
