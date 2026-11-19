@@ -1,24 +1,13 @@
 [
   {
     "id": 1,
-    "tipo": "Publicación",
-    "titulo_es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "titulo_en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "fecha": "2026-10-15",
+    "tipo": "Noticia",
+    "titulo_es": "Premio a proyecto de innovación del LBBS",
+    "titulo_en": "Award for an LBBS innovation project",
+    "fecha": null,
     "fecha_expiracion": null,
-    "resumen_es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    "resumen_en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    "enlace_url": "https://www.unq.edu.ar/"
-  },
-  {
-    "id": 2,
-    "tipo": "Llamado / Beca",
-    "titulo_es": "Duis aute irure dolor in reprehenderit in voluptate velit",
-    "titulo_en": "Duis aute irure dolor in reprehenderit in voluptate velit",
-    "fecha": "2026-10-01",
-    "fecha_expiracion": "2026-12-15",
-    "resumen_es": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-    "resumen_en": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-    "enlace_url": "https://www.unq.edu.ar/"
+    "resumen_es": "Un proyecto de innovación del Laboratorio de Bioquímica y Biología del Suelo (LBBS) recibió un premio recientemente, destacando el trabajo de transferencia e innovación del laboratorio dentro del CBMS.",
+    "resumen_en": "An innovation project from the Laboratory of Soil Biochemistry and Biology (LBBS) recently received an award, highlighting the laboratory's innovation work within CBMS.",
+    "enlace_url": null
   }
 ]

@@ -753,11 +753,23 @@ a:hover {
 	line-height: 1.35;
 }
 
+.item-schedule {
+	font-size: 0.82rem;
+	font-weight: var(--font-weight-medium);
+	color: var(--color-accent-mint);
+	margin-bottom: 0.45rem;
+	line-height: 1.4;
+}
+
 .item-summary {
 	font-size: 0.86rem;
 	color: #b5beb4;
 	line-height: 1.45;
 	margin-bottom: 0.65rem;
+}
+
+.item-summary:last-child {
+	margin-bottom: 0;
 }
 
 .item-link {

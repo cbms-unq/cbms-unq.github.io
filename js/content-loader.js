@@ -10,6 +10,24 @@
   let cachedNews = null;
   let cachedEvents = null;
 
+  const TYPE_LABELS_EN = {
+    'Noticia': 'News',
+    'Llamado / Beca': 'Call / Fellowship',
+    'Seminario': 'Seminar',
+    'Publicación': 'Publication',
+    'Taller': 'Workshop',
+    'Jornada': 'Symposium',
+    'Defensa de Tesis': 'Thesis Defense'
+  };
+
+  function translateType(tipo, lang) {
+    if (!tipo) return '';
+    if (lang === 'en' && TYPE_LABELS_EN[tipo]) {
+      return TYPE_LABELS_EN[tipo];
+    }
+    return tipo;
+  }
+
   function formatDate(isoString, lang) {
     if (!isoString) return '';
     try {
@@ -18,10 +36,7 @@
         const year = parts[0];
         const month = parts[1];
         const day = parts[2];
-        if (lang === 'en') {
-          return `${month}/${day}/${year}`;
-        }
-        return `${day}/${month}/${year}`;
+        return lang === 'en' ? `${month}/${day}/${year}` : `${day}/${month}/${year}`;
       }
       return isoString;
     } catch {
@@ -29,41 +44,108 @@
     }
   }
 
+  function isSafeHttpUrl(rawUrl) {
+    if (!rawUrl || typeof rawUrl !== 'string') return false;
+    try {
+      const parsed = new URL(rawUrl, window.location.href);
+      return parsed.protocol === 'https:' || parsed.protocol === 'http:';
+    } catch {
+      return false;
+    }
+  }
+
+  function renderEmptyState(container, key, fallbackText) {
+    const msg = window.cbmsI18n ? window.cbmsI18n.getTranslation(key, fallbackText) : fallbackText;
+    const p = document.createElement('p');
+    p.className = 'empty-state';
+    p.textContent = msg;
+    container.replaceChildren(p);
+  }
+
+  function buildItemCard(item, lang, options) {
+    const article = document.createElement('article');
+    article.className = 'item-card';
+
+    const meta = document.createElement('div');
+    meta.className = 'item-meta';
+
+    const badge = document.createElement('span');
+    badge.className = 'item-badge';
+    badge.textContent = translateType(item.tipo, lang);
+    meta.appendChild(badge);
+
+    if (item.fecha) {
+      const timeEl = document.createElement('time');
+      timeEl.className = 'item-date';
+      timeEl.setAttribute('datetime', item.fecha);
+      timeEl.textContent = formatDate(item.fecha, lang);
+      meta.appendChild(timeEl);
+    } else if (options.fallbackDateLabel) {
+      const dateLabel = document.createElement('span');
+      dateLabel.className = 'item-date';
+      dateLabel.textContent = options.fallbackDateLabel;
+      meta.appendChild(dateLabel);
+    }
+
+    article.appendChild(meta);
+
+    const titleEl = document.createElement('h4');
+    titleEl.className = 'item-title';
+    titleEl.textContent = lang === 'en' ? (item.titulo_en || item.titulo_es) : item.titulo_es;
+    article.appendChild(titleEl);
+
+    if (options.includeSchedule) {
+      const scheduleText = lang === 'en'
+        ? (item.horario_lugar_en || item.horario_lugar)
+        : (item.horario_lugar_es || item.horario_lugar);
+      if (scheduleText) {
+        const scheduleEl = document.createElement('p');
+        scheduleEl.className = 'item-schedule';
+        scheduleEl.textContent = scheduleText;
+        article.appendChild(scheduleEl);
+      }
+    }
+
+    const summaryEl = document.createElement('p');
+    summaryEl.className = 'item-summary';
+    summaryEl.textContent = lang === 'en' ? (item.resumen_en || item.resumen_es) : item.resumen_es;
+    article.appendChild(summaryEl);
+
+    if (isSafeHttpUrl(item.enlace_url)) {
+      const linkLabel = window.cbmsI18n
+        ? window.cbmsI18n.getTranslation(options.linkKey, options.linkFallback)
+        : options.linkFallback;
+      const linkEl = document.createElement('a');
+      linkEl.className = 'item-link';
+      linkEl.href = item.enlace_url;
+      linkEl.target = '_blank';
+      linkEl.rel = 'noopener noreferrer';
+      linkEl.textContent = `${linkLabel} \u2192`;
+      article.appendChild(linkEl);
+    }
+
+    return article;
+  }
+
   function renderNews(newsItems, lang) {
     const container = document.getElementById('news-container');
     if (!container) return;
 
     if (!newsItems || newsItems.length === 0) {
-      const emptyMsg = window.cbmsI18n ? window.cbmsI18n.getTranslation('news_empty', 'No hay novedades disponibles.') : 'No hay novedades disponibles.';
-      container.innerHTML = `<p class="empty-state">${emptyMsg}</p>`;
+      renderEmptyState(container, 'news_empty', 'No hay novedades disponibles.');
       return;
     }
 
-    const readMoreText = window.cbmsI18n ? window.cbmsI18n.getTranslation('btn_read_more', 'Leer más') : 'Leer más';
-
-    const cardsHtml = newsItems.map((item) => {
-      const title = lang === 'en' ? (item.titulo_en || item.titulo_es) : item.titulo_es;
-      const summary = lang === 'en' ? (item.resumen_en || item.resumen_es) : item.resumen_es;
-      const formattedDate = formatDate(item.fecha, lang);
-
-      const linkHtml = item.enlace_url 
-        ? `<a href="${item.enlace_url}" class="item-link" target="_blank" rel="noopener noreferrer">${readMoreText} &rarr;</a>` 
-        : '';
-
-      return `
-        <article class="item-card">
-          <div class="item-meta">
-            <span class="item-badge">${item.tipo}</span>
-            <time class="item-date" datetime="${item.fecha}">${formattedDate}</time>
-          </div>
-          <h4 class="item-title">${title}</h4>
-          <p class="item-summary">${summary}</p>
-          ${linkHtml}
-        </article>
-      `;
-    }).join('');
-
-    container.innerHTML = cardsHtml;
+    const fragment = document.createDocumentFragment();
+    newsItems.forEach((item) => {
+      fragment.appendChild(buildItemCard(item, lang, {
+        fallbackDateLabel: lang === 'en' ? 'Recent' : 'Reciente',
+        includeSchedule: false,
+        linkKey: 'btn_read_more',
+        linkFallback: 'Leer más'
+      }));
+    });
+    container.replaceChildren(fragment);
   }
 
   function renderEvents(eventItems, lang) {
@@ -71,70 +153,46 @@
     if (!container) return;
 
     if (!eventItems || eventItems.length === 0) {
-      const emptyMsg = window.cbmsI18n ? window.cbmsI18n.getTranslation('events_empty', 'No hay actividades programadas.') : 'No hay actividades programadas.';
-      container.innerHTML = `<p class="empty-state">${emptyMsg}</p>`;
+      renderEmptyState(container, 'events_empty', 'No hay actividades programadas.');
       return;
     }
 
-    const moreInfoText = window.cbmsI18n ? window.cbmsI18n.getTranslation('btn_register', 'Más información') : 'Más información';
+    const fragment = document.createDocumentFragment();
+    eventItems.forEach((item) => {
+      fragment.appendChild(buildItemCard(item, lang, {
+        fallbackDateLabel: lang === 'en' ? 'Monthly series' : 'Ciclo mensual',
+        includeSchedule: true,
+        linkKey: 'btn_register',
+        linkFallback: 'Más información'
+      }));
+    });
+    container.replaceChildren(fragment);
+  }
 
-    const cardsHtml = eventItems.map((item) => {
-      const title = lang === 'en' ? (item.titulo_en || item.titulo_es) : item.titulo_es;
-      const summary = lang === 'en' ? (item.resumen_en || item.resumen_es) : item.resumen_es;
-      const formattedDate = formatDate(item.fecha, lang);
-
-      const linkHtml = item.enlace_url 
-        ? `<a href="${item.enlace_url}" class="item-link" target="_blank" rel="noopener noreferrer">${moreInfoText} &rarr;</a>` 
-        : '';
-
-      return `
-        <article class="item-card">
-          <div class="item-meta">
-            <span class="item-badge">${item.tipo}</span>
-            <time class="item-date" datetime="${item.fecha}">${formattedDate}</time>
-          </div>
-          <h4 class="item-title">${title}</h4>
-          <p class="item-summary" style="color: var(--color-accent-mint); font-size: 0.82rem; font-weight: 500; margin-bottom: 0.4rem;">
-            📍 ${item.horario_lugar}
-          </p>
-          <p class="item-summary">${summary}</p>
-          ${linkHtml}
-        </article>
-      `;
-    }).join('');
-
-    container.innerHTML = cardsHtml;
+  async function fetchJsonArray(path) {
+    try {
+      const resp = await fetch(path);
+      if (resp.ok) {
+        return await resp.json();
+      }
+      return [];
+    } catch (e) {
+      console.warn(`Could not load ${path}:`, e);
+      return [];
+    }
   }
 
   async function loadAllContent() {
+    const [news, events] = await Promise.all([
+      fetchJsonArray('./data/novedades.json'),
+      fetchJsonArray('./data/actividades.json')
+    ]);
+
+    cachedNews = news;
+    cachedEvents = events;
+
     const currentLang = window.cbmsI18n ? window.cbmsI18n.getLanguage() : 'es';
-
-    // Fetch News
-    try {
-      const newsResp = await fetch('./data/novedades.json');
-      if (newsResp.ok) {
-        cachedNews = await newsResp.json();
-      } else {
-        cachedNews = [];
-      }
-    } catch (e) {
-      console.warn('Could not load novedades.json:', e);
-      cachedNews = [];
-    }
     renderNews(cachedNews, currentLang);
-
-    // Fetch Events
-    try {
-      const eventsResp = await fetch('./data/actividades.json');
-      if (eventsResp.ok) {
-        cachedEvents = await eventsResp.json();
-      } else {
-        cachedEvents = [];
-      }
-    } catch (e) {
-      console.warn('Could not load actividades.json:', e);
-      cachedEvents = [];
-    }
     renderEvents(cachedEvents, currentLang);
   }
 
@@ -146,7 +204,6 @@
   function init() {
     loadAllContent();
 
-    // Listen for language change events
     window.addEventListener('cbms:languageChanged', (e) => {
       const newLang = e.detail && e.detail.lang ? e.detail.lang : 'es';
       reRenderWithLanguage(newLang);

@@ -2,23 +2,13 @@
   {
     "id": 1,
     "tipo": "Seminario",
-    "titulo_es": "Seminario: Lorem ipsum dolor sit amet consectetur",
-    "titulo_en": "Seminar: Lorem ipsum dolor sit amet consectetur",
-    "fecha": "2026-11-05",
-    "horario_lugar": "14:00 hs — Auditorio UNQ",
-    "resumen_es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-    "resumen_en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-    "enlace_url": "https://www.unq.edu.ar/"
-  },
-  {
-    "id": 2,
-    "tipo": "Jornada",
-    "titulo_es": "Jornada: Ut enim ad minim veniam quis nostrud",
-    "titulo_en": "Workshop: Ut enim ad minim veniam quis nostrud",
-    "fecha": "2026-11-20",
-    "horario_lugar": "10:00 a 17:00 hs — Laboratorios CBMS",
-    "resumen_es": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-    "resumen_en": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "titulo_es": "Seminarios mensuales del CBMS",
+    "titulo_en": "CBMS Monthly Seminars",
+    "fecha": null,
+    "horario_lugar": "CBMS — Universidad Nacional de Quilmes",
+    "horario_lugar_en": "CBMS — National University of Quilmes",
+    "resumen_es": "Encuentros mensuales del Centro de Bioquímica y Microbiología del Suelo orientados al intercambio académico, la discusión de avances de investigación y la articulación entre los laboratorios del centro.",
+    "resumen_en": "Monthly meetings of the Center for Soil Biochemistry and Microbiology focused on academic exchange, discussion of research progress, and collaboration across the center's laboratories.",
     "enlace_url": null
   }
 ]
