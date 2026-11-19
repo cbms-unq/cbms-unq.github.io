@@ -1,6 +1,6 @@
 # Centro de Bioquímica y Microbiología del Suelo (CBMS - UNQ)
 
-Sitio web oficial del **Centro de Bioquímica y Microbiología del Suelo (CBMS)**, unidad de investigación de la [Universidad Nacional de Quilmes (UNQ)](https://www.unq.edu.ar/) que nuclea y articula al **Laboratorio de Bioquímica y Biofísica de Sistemas (LBBS)** y al **Laboratorio de Fisiología y Genética de Bacterias Beneficiosas para Plantas (LFGBBP)**.
+Sitio web oficial del **Centro de Bioquímica y Microbiología del Suelo (CBMS)**, unidad de investigación de la [Universidad Nacional de Quilmes (UNQ)](https://www.unq.edu.ar/) que nuclea y articula al **Laboratorio de Bioquímica y Biología del Suelo (LBBS)** y al **Laboratorio de Fisiología y Genética de Bacterias Beneficiosas para Plantas (LFGBBP)**.
 
 ## Arquitectura Técnica
 

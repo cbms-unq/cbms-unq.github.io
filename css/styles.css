@@ -588,19 +588,25 @@ a:hover {
 
 .lab-media {
 	width: 100%;
-	aspect-ratio: 16/10;
+	aspect-ratio: 16 / 10;
 	max-height: 12rem;
 	border-radius: 10px;
 	overflow: hidden;
 	position: relative;
-	background-color: var(--color-surface-muted);
+	background: radial-gradient(circle at center, rgba(101, 154, 90, 0.08) 0%, #161b15 100%);
+	border: 1px solid var(--border-subtle);
 	margin-bottom: 1.15rem;
+	padding: 1.15rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .lab-media img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
+	display: block;
 	transition: transform var(--transition-slow);
 }
 
@@ -625,16 +631,8 @@ a:hover {
 	font-size: 0.92rem;
 	color: var(--color-accent-mint);
 	font-weight: var(--font-weight-medium);
-	margin-bottom: 0.85rem;
-	line-height: 1.35;
-}
-
-.lab-desc {
-	font-size: 0.88rem;
-	color: #b5beb4;
-	line-height: 1.55;
 	margin-bottom: 1.25rem;
-	flex-grow: 1;
+	line-height: 1.35;
 }
 
 .lab-actions {
