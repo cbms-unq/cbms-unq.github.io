@@ -1,9 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
   <defs>
     <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1d241c"/>
-      <stop offset="100%" stop-color="#242e22"/>
+      <stop offset="0%" stop-color="#181e17"/>
+      <stop offset="50%" stop-color="#222b20"/>
+      <stop offset="100%" stop-color="#161c15"/>
     </linearGradient>
+    <pattern id="aboutGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
     <linearGradient id="aboutAccent" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#a3d996"/>
       <stop offset="100%" stop-color="#659A5A"/>
@@ -11,32 +15,29 @@
   </defs>
 
   <!-- Background Card -->
-  <rect x="2" y="2" width="256" height="256" rx="16" fill="url(#aboutBg)" stroke="#659A5A" stroke-opacity="0.35" stroke-width="2"/>
-  <rect x="10" y="10" width="240" height="240" rx="12" fill="none" stroke="#659A5A" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <rect width="600" height="600" rx="16" fill="url(#aboutBg)"/>
+  <rect width="600" height="600" rx="16" fill="url(#aboutGrid)"/>
+  <rect x="16" y="16" width="568" height="568" rx="12" fill="none" stroke="#659A5A" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="8,8"/>
 
-  <!-- Molecular / Science Vector Icon -->
-  <g transform="translate(130, 95)">
-    <!-- Central Node -->
-    <circle cx="0" cy="0" r="14" fill="#659A5A" fill-opacity="0.3" stroke="url(#aboutAccent)" stroke-width="2.5"/>
-    <!-- Outer Nodes and Bonds -->
-    <line x1="0" y1="0" x2="-35" y2="-25" stroke="#a3d996" stroke-width="2"/>
-    <circle cx="-35" cy="-25" r="9" fill="#1d241c" stroke="#a3d996" stroke-width="2"/>
-
-    <line x1="0" y1="0" x2="35" y2="-25" stroke="#a3d996" stroke-width="2"/>
-    <circle cx="35" cy="-25" r="9" fill="#1d241c" stroke="#a3d996" stroke-width="2"/>
-
-    <line x1="0" y1="0" x2="-25" y2="35" stroke="#a3d996" stroke-width="2"/>
-    <circle cx="-25" cy="35" r="8" fill="#1d241c" stroke="#a3d996" stroke-width="2"/>
-
-    <line x1="0" y1="0" x2="25" y2="35" stroke="#a3d996" stroke-width="2"/>
-    <circle cx="25" cy="35" r="8" fill="#1d241c" stroke="#a3d996" stroke-width="2"/>
+  <!-- Field Plants & Soil Horizon Icon -->
+  <g transform="translate(300, 225)">
+    <circle cx="0" cy="0" r="76" fill="#659A5A" fill-opacity="0.12" stroke="#659A5A" stroke-opacity="0.35" stroke-width="2"/>
+    <!-- Soil line -->
+    <path d="M -46,24 Q 0,18 46,24" fill="none" stroke="#946a44" stroke-width="3" stroke-linecap="round"/>
+    <!-- Roots -->
+    <path d="M 0,21 C -4,34 -14,40 -18,46 M 0,21 C 2,34 12,40 16,46 M 0,21 L 0,48" fill="none" stroke="#946a44" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85"/>
+    <!-- Stem & Leaves -->
+    <path d="M 0,21 L 0,-28" fill="none" stroke="url(#aboutAccent)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 0,2 C -26,-2 -34,-24 -22,-30 C -8,-34 0,-14 0,2 Z" fill="#659A5A" fill-opacity="0.25" stroke="url(#aboutAccent)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M 0,-6 C 26,-10 34,-32 22,-38 C 8,-42 0,-22 0,-6 Z" fill="#a3d996" fill-opacity="0.2" stroke="url(#aboutAccent)" stroke-width="2.5" stroke-linejoin="round"/>
   </g>
 
   <!-- Labels -->
   <g text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
-    <rect x="40" y="160" width="180" height="22" rx="11" fill="#659A5A" fill-opacity="0.2" stroke="#659A5A" stroke-opacity="0.4"/>
-    <text x="130" y="175" font-size="10" font-weight="700" fill="#a3d996" letter-spacing="1.2">GRÁFICA PLACEHOLDER</text>
-    <text x="130" y="205" font-size="13" font-weight="600" fill="#ffffff">Ilustración Científica</text>
-    <text x="130" y="225" font-size="11" fill="#a0a0a0">260 × 260 px</text>
+    <rect x="190" y="340" width="220" height="30" rx="15" fill="#659A5A" fill-opacity="0.2" stroke="#659A5A" stroke-opacity="0.5"/>
+    <text x="300" y="360" font-size="12" font-weight="700" fill="#a3d996" letter-spacing="2">FOTO PLACEHOLDER</text>
+    <text x="300" y="405" font-size="22" font-weight="700" fill="#ffffff">Objeto de estudio</text>
+    <text x="300" y="435" font-size="15" fill="#a0a0a0">Plantas en el campo · 1:1</text>
+    <text x="300" y="476" font-size="13" fill="#74a367" font-style="italic">Pendiente de fotografía oficial</text>
   </g>
 </svg>
