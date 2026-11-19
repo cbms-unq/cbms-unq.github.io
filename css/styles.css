@@ -322,7 +322,7 @@ a:hover {
 
 .hero-grid {
 	display: grid;
-	grid-template-columns: 1.15fr 0.85fr;
+	grid-template-columns: 1.05fr 0.95fr;
 	align-items: center;
 	gap: 2.5rem;
 }
@@ -332,6 +332,7 @@ a:hover {
 	flex-direction: column;
 	align-items: flex-start;
 	text-align: left;
+	min-width: 0;
 }
 
 /* Small organic green accent circle from mockup */
@@ -350,6 +351,7 @@ a:hover {
 	line-height: 1.18;
 	color: var(--color-text-white);
 	margin-bottom: 1rem;
+	text-wrap: balance;
 }
 
 .hero-subtitle {
@@ -359,6 +361,7 @@ a:hover {
 	margin-bottom: 1.8rem;
 	line-height: 1.55;
 	max-width: 490px;
+	text-wrap: pretty;
 }
 
 /* Pill CTA Buttons */
@@ -405,30 +408,46 @@ a:hover {
 	transform: translateY(-2px);
 }
 
-/* Hero Visual Composition matching Mockup */
+/* Hero Visual Composition */
 .hero-visual {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	min-width: 0;
 }
 
-.hero-portrait-frame {
+.hero-logo-figure {
 	position: relative;
 	width: 100%;
-	max-width: 18.5rem;
+	max-width: 26rem;
+	margin: 0;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	gap: 0.9rem;
+	background: transparent;
 }
 
-.hero-image {
-	width: 100%;
+.hero-logo-image {
+	width: clamp(15rem, 24vw, 21.5rem);
 	height: auto;
-	max-height: 24rem;
+	aspect-ratio: 1 / 1;
 	object-fit: contain;
 	display: block;
-	filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+	background: transparent;
+	filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.38));
+}
+
+.hero-logo-caption {
+	font-size: 0.7rem;
+	line-height: 1.45;
+	color: #a9b4a7;
+	text-align: center;
+	width: 100%;
+	max-width: 25rem;
+	margin: 0;
+	text-wrap: pretty;
 }
 
 /* ==========================================================================
@@ -923,8 +942,13 @@ a:hover {
 		margin-right: auto;
 	}
 
-	.hero-portrait-frame {
-		max-width: 260px;
+	.hero-logo-figure {
+		max-width: 22rem;
+		margin: 0 auto;
+	}
+
+	.hero-logo-image {
+		width: clamp(13.5rem, 52vw, 17.5rem);
 	}
 
 	.about-grid {
